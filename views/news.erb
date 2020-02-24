@@ -18,17 +18,26 @@
     <!-- Your own CSS -->
     <link rel="stylesheet" href="/styles.css">
 
-    <title>Geocoding</title>
+    <title>News</title>
   </head>
   <body>
 
+
+      
     <div class="container mt-5">
-      <h1>Geocoding</h1>
-      <form action="/news">
-        <input type="text" name="q">
-        <button type="submit">Go there</submit>
+         <form action="/news">
+         <h1> <%= @lat %> <%= @long %> </h1>
       </form>
+
+    
+   
     </div>
+
+
+
+
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
