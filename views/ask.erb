@@ -22,12 +22,37 @@
   </head>
   <body>
 
+
+
+
+
     <div class="container mt-5">
       <h1>Geocoding</h1>
       <form action="/news">
         <input type="text" name="q">
         <button type="submit">Go there</submit>
-      </form>
+    
+ <div class="container mt-5">
+      <h1>Weather</h1>
+  <p>
+  <%= "current temperature: #{@current_temp} degree. "%>
+  </p>
+
+  <h3> Forecast for the Week </h3>
+  <p>
+   <ul>
+    <% for daily_forecast in @forecast["daily"]["data"] %>
+      <li><%= "A high temperature of #{daily_forecast["temperatureHigh"]}. #{daily_forecast["summary"]}" %></li>
+    <% end %>
+  </ul>
+  </p>
+  </p>
+    </div>
+
+
+
+
+  </form>
     </div>
 
     <!-- Optional JavaScript -->
